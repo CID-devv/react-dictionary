@@ -6,11 +6,13 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='container'>
-				<header className='App-header'>hello</header>
+				<header className='App-header'></header>
 				<main>
 					<SearchForm />
 				</main>
-				<footer className='text-center'>coded by Cassandra Dauphin</footer>
+				<footer className='App-footer'>
+					<small>Coded by Cassandra Dauphin</small>
+				</footer>
 			</div>
 		</div>
 	)
