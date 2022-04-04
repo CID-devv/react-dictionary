@@ -5,13 +5,21 @@ import "./SearchForm.css"
 export default function SearchForm() {
 	let [keyword, setKeyword] = useState("")
 
+	function handleResponse(response) {
+		console.log(response.data)
+	}
+
 	function search(e) {
 		e.preventDefault()
-		alert("searching")
+		alert(`searching for ${keyword}`)
+
+		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
+
+		axios.get(apiUrl).then(handleResponse)
 	}
 
 	function handleKeywordChange(e) {
-		console.log(e)
+		setKeyword(e.target.value)
 	}
 
 	return (
